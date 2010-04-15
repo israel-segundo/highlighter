@@ -28,6 +28,7 @@ class HighlighterHookHelper extends AppHelper {
  * @return void
  */
     function beforeRender() {
+if (ClassRegistry::getObject('view')) {
 		echo $this->Html->css('/highlighter/css/shCore');
 		echo $this->Html->css('/highlighter/css/shThemeRDark');
 		echo $this->Html->script('/highlighter/js/shCore.js');
@@ -48,12 +49,13 @@ class HighlighterHookHelper extends AppHelper {
 		echo $this->Html->script('/highlighter/js/shBrushSql.js');
 		echo $this->Html->script('/highlighter/js/shBrushVb.js');
 		echo $this->Html->script('/highlighter/js/shBrushXml.js');
-      echo $this->Html->scriptBlock("
+        echo $this->Html->scriptBlock("
 	SyntaxHighlighter.config.clipboardSwf = '/highlighter/js/clipboard.swf';
 	SyntaxHighlighter.config.stripBrs = true;
 	SyntaxHighlighter.defaults['wrap-lines'] = true;
 	SyntaxHighlighter.all();
 ");
+	}
     }
 }
 ?>
