@@ -1,0 +1,51 @@
+Highlighter
+-----------------------------------------------------------------------------------------------------
+A plugin for Croogo CMS for code syntax highlighting.
+
+
+REQUIREMENTS
+-----------------------------------------------------------------------------------------------------
+    - Requires Croogo 1.3.2 or above.
+    - It is recommended that you have the option of editing the HTML content of your posts.
+      TinyMCE plugin already does this trick.
+
+HOW TO USE
+-----------------------------------------------------------------------------------------------------
+    1. Log in to admin panel
+    2. Go to Extensions > Plugins page
+    3. Upload the zip file (available here)
+    4. Click on tick/cross icon of 'highlighter' for activating or deactivating the plugin
+
+
+CREDITS
+-----------------------------------------------------------------------------------------------------
+
+Author       : Jacob 'jacmoe' Moen
+Author Email : jacmoe@jacmoe.dk
+Author Url   : http://www.jacmoe.dk/
+
+This plugin uses third-party software for syntax highlighting.
+Alex Gorbatchev's SyntaxHighlighter. http://alexgorbatchev.com/SyntaxHighlighter/
+
+
+EXAMPLE
+-----------------------------------------------------------------------------------------------------
+After the plugin was activated, go and create a new post. Use HTML button on the TinyMCE WYSIWYG editor
+and paste the following code:
+
+        <pre class="brush: php;">class HighlighterActivation {
+
+            public function beforeActivation(&amp;$controller) {
+                 return true;
+            }
+            public function onActivation(&amp;$controller) {}
+            public function beforeDeactivation(&amp;$controller) {
+                  return true;
+            }
+            public function onDeactivation(&amp;$controller) {}
+
+
+        }
+        </pre>
+
+Save your post and enjoy your new syntax highlighting functionality!

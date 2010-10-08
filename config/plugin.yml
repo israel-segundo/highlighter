@@ -1,0 +1,10 @@
+name: Highlighter
+description: Highlighter plugin for Croogo
+
+author: Jacob 'jacmoe' Moen
+authorEmail: jacmoe@jacmoe.dk
+authorUrl: http://www.jacmoe.dk/
+
+dependencies:
+  plugins:
+    - extensions
